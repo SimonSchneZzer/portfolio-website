@@ -1,0 +1,92 @@
+/* Common section styles */
+.section {
+  padding: calc(1.5 * var(--spacing-lg)) var(--spacing-nav-h);
+  font-family: var(--font-main);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Common title styles */
+.section-title {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: var(--font-size-h2);
+  font-weight: 600;
+  margin: 0 0 var(--spacing-md) 0;
+  color: var(--color-white);
+}
+
+.section-title-rule {
+  flex: 1;
+  height: 3px;
+  background: var(--color-white);
+  border-radius: 3px;
+}
+
+/* Common grid styles */
+.section-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: calc(2 * var(--spacing-lg));
+  flex: 1;
+  place-items: center;
+}
+
+/* Common bio styles */
+.bio {
+  position: relative;
+  padding: calc(2 * var(--spacing-md));
+  line-height: 1.55;
+  font-size: var(--font-size-body);
+  color: var(--color-white);
+}
+
+.bio::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 45px;
+  height: 45px;
+  border-top: 3px solid var(--color-white);
+  border-left: 3px solid var(--color-white);
+}
+
+.bio::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 45px;
+  height: 45px;
+  border-left: 2px solid var(--color-white);
+  border-bottom: 2px solid var(--color-white);
+}
+
+.bio p + p {
+  margin-top: var(--spacing-lg);
+}
+
+.bio strong {
+  color: var(--color-white);
+  font-weight: 700;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .section-grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+  }
+
+  .bio {
+    padding: var(--spacing-md);
+  }
+
+  .bio::before,
+  .bio::after {
+    display: none;
+  }
+} 

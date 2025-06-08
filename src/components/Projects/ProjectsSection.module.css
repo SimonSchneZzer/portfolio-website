@@ -1,0 +1,11 @@
+.projects {
+  composes: section from '../../styles/sections.css';
+}
+
+.title {
+  composes: section-title from '../../styles/sections.css';
+}
+
+.rule {
+  composes: section-title-rule from '../../styles/sections.css';
+}

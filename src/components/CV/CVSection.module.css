@@ -1,0 +1,102 @@
+.cvSection {
+  composes: section from '../../styles/sections.css';
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  composes: section-title from '../../styles/sections.css';
+  margin-bottom: var(--spacing-xl);
+}
+
+.title h2 {
+  font-size: var(--font-size-h2);
+  font-weight: 600;
+  color: var(--color-white);
+  margin: 0;
+}
+
+.rule {
+  composes: section-title-rule from '../../styles/sections.css';
+}
+
+.content {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  color: var(--color-white);
+}
+
+.line {
+  composes: section-title-rule from '../../styles/sections.css';
+}
+
+.label {
+  font-size: var(--font-size-h2);
+  font-weight: 600;
+  white-space: nowrap;
+  margin: 0;
+}
+
+.columns {
+  display: flex;
+  justify-content: space-between;
+  gap: 6rem;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.columns > div {
+  flex: 1;
+  min-width: 300px;
+  max-width: 600px;
+}
+
+.columns h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  color: var(--color-white);
+}
+
+.columns ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.columns li {
+  margin-bottom: 1.2rem;
+  line-height: 1.6;
+  color: var(--color-text);
+}
+
+.columns strong {
+  color: var(--color-white);
+  font-weight: 700;
+}
+
+.columns > div:first-child {
+  text-align: right;
+}
+
+@media screen and (max-width: 768px) {
+  .columns {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .columns > div {
+    min-width: 100%;
+    max-width: 100%;
+    text-align: center !important;
+  }
+}

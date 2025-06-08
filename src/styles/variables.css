@@ -1,0 +1,46 @@
+:root {
+  /* Colors */
+  --color-accent: #f89602;
+  --color-bg: #181818;
+  --color-nav-bg: rgba(36, 36, 36, 0.75);
+  --color-nav-shadow: 0 2px 12px rgba(0, 0, 0, 0.09);
+  --color-section-bg: transparent;
+  --color-text: var(--color-white-secondary);
+  --color-white: #fff;
+  --color-white-secondary: #ccc;
+
+  /* Font */
+  --font-main: 'Source Code Pro', monospace;
+  --font-size-body: clamp(1rem, 1.1vw, 1.125rem);
+  --font-size-h2: clamp(2.4rem, 4vw, 3rem);
+  --font-size-skill-lg: 2.25rem;
+  --font-size-skill-md: 1.4rem;
+  --font-size-skill-sm: 1rem;
+  --font-size-nav: 1.2rem;
+  --font-size-nav-scrolled: 1rem;
+
+  /* Spacing */
+  --spacing-lg: 4rem;
+  --spacing-md: 2rem;
+  --spacing-main-top: 96px;
+  --spacing-nav-h: 2.5vw;
+  --spacing-nav-v: 0.7rem;
+  --spacing-section: 2.5rem;
+  --spacing-nav-link: 0.5rem 1rem;
+
+  /* Dimensions */
+  --height-nav: 64px;
+  --height-nav-large: 96px;
+  --height-loader: 40px;
+  --width-loader: 40px;
+  --border-loader: 3px;
+
+  /* Transitions */
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.3s ease;
+
+  /* Misc */
+  --radius: 12px;
+  --radius-loader: 50%;
+  --blur-nav: 8px;
+}

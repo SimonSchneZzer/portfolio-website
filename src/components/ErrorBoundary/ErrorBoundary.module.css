@@ -1,0 +1,59 @@
+.errorContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: var(--spacing-lg);
+  text-align: center;
+  background: var(--color-background);
+  color: var(--color-white);
+}
+
+.errorContainer h2 {
+  font-size: var(--font-size-h2);
+  margin-bottom: var(--spacing-md);
+}
+
+.errorContainer p {
+  margin-bottom: var(--spacing-lg);
+  font-size: var(--font-size-body);
+}
+
+.retryButton {
+  padding: 0.75rem 1.5rem;
+  font-size: var(--font-size-body);
+  background: var(--color-primary);
+  color: var(--color-white);
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.retryButton:hover {
+  background: var(--color-primary-dark);
+}
+
+.errorDetails {
+  margin-top: var(--spacing-lg);
+  width: 100%;
+  max-width: 800px;
+}
+
+.errorDetails summary {
+  cursor: pointer;
+  padding: var(--spacing-sm);
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: var(--border-radius);
+}
+
+.errorDetails pre {
+  margin-top: var(--spacing-sm);
+  padding: var(--spacing-sm);
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: var(--border-radius);
+  overflow-x: auto;
+  text-align: left;
+  font-size: 0.9em;
+} 

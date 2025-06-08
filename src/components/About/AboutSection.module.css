@@ -1,0 +1,87 @@
+.about {
+    composes: section from '../../styles/sections.css';
+    overflow-x: hidden;
+}
+
+.title {
+    composes: section-title from '../../styles/sections.css';
+}
+
+.rule {
+    composes: section-title-rule from '../../styles/sections.css';
+}
+
+.grid {
+    composes: section-grid from '../../styles/sections.css';
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.bio {
+    composes: bio from '../../styles/sections.css';
+    width: 100%;
+}
+
+.bio::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 45px;
+    height: 45px;
+    border-top: 3px solid var(--color-white);
+    border-left: 3px solid var(--color-white);
+}
+
+.bio::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 45px;
+    height: 45px;
+    border-left: 2px solid var(--color-white);
+    border-bottom: 2px solid var(--color-white);
+}
+
+.bio p + p {
+    margin-top: var(--spacing-lg);
+}
+
+.bio strong {
+    color: var(--color-white);
+    font-weight: 700;
+}
+
+.cloudWrapper {
+    width: 100%;
+    display: flex;
+    overflow: hidden;
+}
+
+@media (max-width: 768px) {
+    .bio {
+        padding: var(--spacing-md);
+    }
+
+    .bio::before,
+    .bio::after {
+        display: none;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-lg);
+        padding: 0 var(--spacing-sm);
+    }
+
+    .cloudWrapper {
+        width: 100%;
+        justify-content: center;
+        margin-top: var(--spacing-md);
+    }
+
+    .bio p {
+        padding: 0 var(--spacing-xs);
+    }
+}
